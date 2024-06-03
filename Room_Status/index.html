@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <!-- Metadata: Xác định mã hóa ký tự, cài đặt viewport và khả năng tương thích -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fonts/fontawesome-free-6.5.2/css/all.min.css">
+
+
+    <!-- Tệp CSS tùy chỉnh (tùy chọn): Bạn có thể bao gồm các kiểu của riêng mình ở đây -->
+    <link rel="stylesheet" href="css/styleindex.css">
+</head>
+
+<body>
+    <!-- Bootstrap container cho bố cục rộng cố định hoặc rộng linh hoạt -->
+    <div class="container">
+        <!-- Tiêu đề chính của trang -->
+        <h1 class="mt-5">Phòng 1</h1>
+
+
+
+
+        <!------------------------------------------- Nút kích hoạt modal Thanh toán------------------------------------------->
+        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalThanhToan">
+            Thanh toán
+        </button>
+
+
+        <!------------------------------------------- Nút kích hoạt modal Thêm người-------------------------------------------->
+        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalThemNguoi">
+            Thêm người
+        </button>
+
+        <!------------------------------------------- Nút kích hoạt modal Thông tin-------------------------------------------->
+        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalThongTin">
+            Thông tin
+        </button>
+
+        <!------------------------------------------- Nút kích hoạt modal Thêm nhà trọ-------------------------------------------->
+        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalThemNhaTro">
+            Thêm nhà trọ
+        </button>
+
+    </div>
+
+    <!--------------------------------------------------- Cấu trúc Modal Thanh toán -------------------------------------------->
+
+    <div class="modal fade" id="modalThanhToan" tabindex="-1" aria-labelledby="modalThanhToanLabel" aria-hidden="true">
+        <!-- Hộp thoại modal container -->
+        <div class="modal-dialog" role="document">
+            <!-- Nội dung modal -->
+            <div class="modal-content">
+                <!-- Đầu modal -->
+                <div class="modal-header border border-0">
+                    <!-- Tiêu đề modal -->
+                    <h3 class="modal-title fw-semibold" id="myModalLabel">Thanh toán P-1</h3>
+                    <!-- Nút đóng modal -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <!-- Thân modal -->
+                <div class="modal-body border border-0">
+                    <!-- Trường nhập liệu bên trong modal -->
+                    <div><span class="text-muted fs-6">Mã Hóa Đơn: #A1321</span></div>
+
+                    <br>
+                    <form class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="inputOldElectric" class="form-label fw-semibold">Chỉ số điện củ</label>
+                            <input type="text" class="form-control" id="inputOldElectric" placeholder="123">
+                        </div>
+                        <div class="col-md-6 ">
+                            <label for="inputNewElectric" class="form-label fw-semibold">Chỉ số điện mới</label>
+                            <input type="text" class="form-control" id="inputNewElectric" placeholder="123">
+                        </div>
+                    </form>
+
+                    <form class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="inputOldWater" class="form-label fw-semibold">Chỉ số nước củ</label>
+                            <input type="text" class="form-control" id="inputOldWater" placeholder="123">
+                        </div>
+                        <div class="col-md-6 ">
+                            <label for="inputNewWater" class="form-label fw-semibold">Chỉ số nước mới</label>
+                            <input type="text" class="form-control" id="inputNewWater" placeholder="123">
+                        </div>
+                    </form>
+
+                    <div class="mb-3">
+                        <label for="costsIncurred" class="form-label fw-semibold">Chi phí phát sinh</label>
+                        <input type="text" class="form-control" id="costsIncurred" placeholder="123">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="note" class="form-label fw-semibold">Lí do</label>
+                        <textarea id="note" class="form-control" name="note" rows="4" cols="50">123</textarea>
+                    </div>
+
+                </div>
+                <!-- Chân modal -->
+                <div class="modal-footer border border-0">
+                    <!-- Nút lưu thay đôi ở chân modal -->
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Lưu</button>
+                    <!-- Nút xuất bill ở chân modal -->
+                    <button type="button" class="btn green-submit" data-bs-dismiss="modal">Xuất Bill</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------- Cấu trúc Modal Thêm Người ------------------------------------------------------>
+
+    <div class="modal fade" id="modalThemNguoi" tabindex="-1" aria-labelledby="modalThemNguoiLabel" aria-hidden="true">
+        <!-- Hộp thoại modal container -->
+        <div class="modal-dialog" role="document">
+            <!-- Nội dung modal -->
+            <div class="modal-content">
+                <!-- Đầu modal -->
+                <div class="modal-header border border-0">
+                    <!-- Tiêu đề modal -->
+                    <h3 class="modal-title fw-semibold" id="myModalLabel">Thêm người</h3>
+
+                    <!-- Nút đóng modal -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <!-- Thân modal -->
+                <div class="modal-body border border-0">
+                    <!-- Trường nhập liệu bên trong modal -->
+                    <div class="mb-3">
+                        <label for="phoneNumber" class="form-label fw-semibold">Số điện thoại</label>
+                        <input type="text" class="form-control" id="phoneNumber" placeholder="0943678910JQKA">
+
+                    </div>
+                </div>
+                <!-- Chân modal -->
+                <div class="modal-footer border border-0">
+                    <!-- Nút đóng ở chân modal -->
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Đóng</button>
+                    <!-- Nút lưu thay đổi ở chân modal -->
+                    <button type="button" class="btn green-submit" data-bs-dismiss="modal">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------- Cấu trúc Modal Thông tin ------------------------------------------------------>
+
+    <div class="modal fade" id="modalThongTin" tabindex="-1" aria-labelledby="modalThongTinLabel" aria-hidden="true">
+        <!-- Hộp thoại modal container -->
+        <div class="modal-dialog" role="document">
+            <!-- Nội dung modal -->
+            <div class="modal-content">
+                <!-- Đầu modal -->
+                <div class="modal-header border border-0">
+                    <!-- Tiêu đề modal -->
+                    <h3 class="modal-title fw-semibold" id="myModalLabel">Thông tin P-1</h3>
+                    <!-- Nút đóng modal -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <!-- Thân modal -->
+                <div class="modal-body border border-0">
+                    <!-- Trường nhập liệu bên trong modal -->
+                    <div class="mb-3">
+                        <label for="inputNewElectric" class="form-label fw-semibold">Chỉ số điện mới</label>
+                        <input type="text" class="form-control" id="inputNewElectric" placeholder="123">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputNewWater" class="form-label fw-semibold">Chỉ số nước mới</label>
+                        <input type="text" class="form-control" id="inputNewWater" placeholder="123">
+                    </div>
+
+                    <label for="roomFees" class="form-label fw-semibold d-block">Tiền phòng</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="roomFees" placeholder="123">
+                        <span class="input-group-text text-underline">đ</span>
+                    </div>
+
+
+                    <form class="row g-3">
+                        <label for="renter" class="form-label fw-semibold mb-0">Người thuê</label>
+                        <div class="col-md-7">
+                            <label class="visually-hidden"></label>
+                            <input type="text" class="form-control" id="renter" placeholder="Nguyễn Văn A">
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="rounded btn btn-info col-md-1 icon-background-color">
+                            <i class="fa-solid fa-user-pen"></i>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="rounded btn btn-info col-md-1 icon-background-color">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                    </form>
+
+                </div>
+                <!-- Chân modal -->
+                <div class="modal-footer border border-0">
+                    <!-- Nút đóng ở chân modal -->
+                    <button type="button" class="btn btn-light border" data-bs-dismiss="modal">Quay về</button>
+                    <!-- Nút lưu thay đổi ở chân modal -->
+                    <button type="button" class="btn btn-info text-white" data-bs-dismiss="modal">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------------------------- Cấu trúc Modal Thêm nhà trọ -------------------------------------------->
+
+    <div class="modal fade" id="modalThemNhaTro" tabindex="-1" aria-labelledby="modalThemNhaTroLabel"
+        aria-hidden="true">
+        <!-- Hộp thoại modal container -->
+        <div class="modal-dialog modal-lg" role="document">
+            <!-- Nội dung modal -->
+            <div class="modal-content">
+                <!-- Đầu modal -->
+                <div class="modal-header border border-0">
+
+                    <div class="rounded ">
+                        <i class="fa-solid fa-house fa fa-camera fa-2x mr-3"></i>
+                    </div>
+                    <!-- Tiêu đề modal -->
+
+                    <h3 class="modal-title fw-semibold" id="myModalLabel">Thêm nhà trọ</h3>
+
+                    <!-- Nút đóng modal -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+
+
+                </div>
+                <!-- Thân modal -->
+                <div class="modal-body border border-0">
+                    <!-- Trường nhập liệu bên trong modal -->
+                    <div class="border-left mb-3">
+                        <span class="fs-6 fw-semibold ">Thông tin</span>
+                    </div>
+                    <form class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="roomName" class="form-label fw-semibold">Tên nhà*</label>
+                            <input type="text" class="form-control" id="roomName" placeholder="Tên nhà">
+                        </div>
+                        <div class="col-md-6 ">
+                            <label for="roomNumber" class="form-label fw-semibold">Số phòng</label>
+                            <input type="text" class="form-control" id="roomNumber" placeholder="Số phòng">
+                        </div>
+                    </form>
+
+                    <div class="mb-3">
+                        <label for="detailedAddress" class="form-label fw-semibold">Địa chỉ chi tiết</label>
+                        <input type="text" class="form-control" id="detailedAddress"
+                            placeholder="Ví dụ: 888 - Tran Binh Trong">
+                    </div>
+
+                    <div class="border-left mb-3">
+                        <span class="fs-6 fw-semibold ">Chỉ số</span>
+                    </div>
+                    <form class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="electricityIndex" class="form-label fw-semibold">Chỉ số điện</label>
+                            <input type="text" class="form-control" id="electricityIndex" placeholder="Chỉ số điện">
+                        </div>
+                        <div class="col-md-6 ">
+                            <label for="electricityIndex" class="form-label fw-semibold">Chỉ số nước</label>
+                            <input type="text" class="form-control" id="electricityIndex" placeholder="Chỉ số nước">
+                        </div>
+                    </form>
+
+                    <div class="mb-3">
+                        <label for="roomRates" class="form-label fw-semibold">Giá phòng</label>
+                        <input type="text" class="form-control" id="roomRates"
+                            placeholder="Giá phòng (có thể điều chỉnh nếu bạn muốn)">
+                    </div>
+
+
+
+                </div>
+                <!-- Chân modal -->
+                <div class="modal-footer border border-0">
+                    <!-- Nút lưu thay đôi ở chân modal -->
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Đóng</button>
+                    <!-- Nút xuất bill ở chân modal -->
+                    <button type="button" class="btn green-submit" data-bs-dismiss="modal">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include the Bootstrap JavaScript bundle from a CDN (Content Delivery Network) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- JavaScript tùy chỉnh để xử lý tự động lấy nét khi modal hiển thị -->
+    <script>
+        // Sử dụng jQuery để lắng nghe sự kiện khi modal hiển thị
+        $('#myModal').on('shown.bs.modal', function () {
+            // Khi modal được hiển thị, kích hoạt sự kiện 'focus' cho trường nhập liệu
+            $('#myInput').trigger('focus');
+        });
+    </script>
+</body>
+
+</html>
